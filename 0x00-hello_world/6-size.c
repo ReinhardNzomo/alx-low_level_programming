@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main: - entry funcion
- * return: 0 always
+ * main - entry funcion
+ * Return: 0 always success
  */
 int main(void)
 {
