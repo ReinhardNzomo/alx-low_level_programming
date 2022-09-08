@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- *Description: main prints Programming is .......
- * Return 0 if successful.
+ * Description: main - prints Programming is .......
+ * Return: 0 if successful.
  */
 int main(void)
 {
