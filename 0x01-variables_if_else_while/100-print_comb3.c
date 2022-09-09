@@ -3,7 +3,7 @@
  * main - entry
  * Return: 0
  */
-int main()
+int main(void)
 {
 	int a = 0, b;
 
@@ -11,7 +11,7 @@ int main()
 	{
 		b = 0;
 
-		while(b <= 9)
+		while (b <= 9)
 		{
 			if (a != b && a < b)
 			{
