@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* int _isalpha(int c) -> check if alphabet
+* _isalpha(int c) -> check if alphabet
 * @c: a character argument
 * Return: returns 1 or 0
 */
