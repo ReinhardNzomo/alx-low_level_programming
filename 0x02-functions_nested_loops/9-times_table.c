@@ -24,7 +24,7 @@ void times_table(void)
 					_putchar(' ');
 					_putchar(' ');
 				}
-				else if (j = 9)
+				else if (j == 9)
 				{
 					_putchar(x + '0');
 				}
@@ -38,7 +38,7 @@ void times_table(void)
 					_putchar(',');
 					_putchar(' ');
 				}
-				else if (j = 9)
+				else if (j == 9)
 				{
 					_putchar((x / 10) + '0');
 					_putchar((x % 10) + '0');
