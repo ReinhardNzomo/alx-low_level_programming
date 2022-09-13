@@ -6,6 +6,7 @@
  * @n: integer input
  * Return: void
  */
+int calc_table(int a, int b, int n);
 
 void print_times_table(int n)
 {
@@ -17,13 +18,13 @@ void print_times_table(int n)
 		{
 			for (b = 0; b <= n; b++)
 			{
-				printf(calc_table(a, b, n));
+				calc_table(a, b, n);
 			}
 		}
 	}
 }
 
-int calc_table(int a, int b, int n)
+calc_table(int a, int b, int n)
 {
 	int c, d, e, f;
 
