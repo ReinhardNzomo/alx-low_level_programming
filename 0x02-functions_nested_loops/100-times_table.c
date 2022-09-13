@@ -62,6 +62,4 @@ calc_table(int a, int b, int n)
 	}
 	else
 		_putchar('\n');
-	
-	return (0);
 }
