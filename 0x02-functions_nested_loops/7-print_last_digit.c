@@ -6,13 +6,10 @@
 */
 int print_last_digit(int c)
 {
-	int x;
+	int x = c % 10;
 
 	if (c < 0)
-	{
-		c = -c;
-	}
-	x = c % 10;
+		x = x* -1;
 	_putchar(x + '0');
 
 	return (x);
