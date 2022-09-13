@@ -24,7 +24,7 @@ void print_times_table(int n)
 	}
 }
 
-calc_table(a, b, n)
+calc_table()
 {
 	int c, d, e, f;
 
