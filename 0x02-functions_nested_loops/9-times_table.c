@@ -22,9 +22,9 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(' ');
 			}
-			else
+			else if (x >= 10)
 			{
-				_putchar(x +'0');
+				_putchar(x + '0');
 				_putchar(',');
 				_putchar(' ');
 			}
