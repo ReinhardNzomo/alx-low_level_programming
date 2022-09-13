@@ -17,13 +17,13 @@ void print_times_table(int n)
 		{
 			for (b = 0; b <= n; b++)
 			{
-				calc(a, b);
+				calc_table(a, b, n);
 			}
 		}
 	}
 }
 
-int calc_table(int a, int b)
+int calc_table(int a, int b, int n)
 {
 	int c, d, e, f;
 
@@ -61,4 +61,6 @@ int calc_table(int a, int b)
 	}
 	else
 		_putchar('\n');
+	
+	return (0);
 }
