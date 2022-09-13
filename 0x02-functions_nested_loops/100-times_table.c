@@ -17,7 +17,7 @@ void print_times_table(int n)
 		{
 			for (b = 0; b <= n; b++)
 			{
-				calc_table(a, b, n);
+				printf(calc_table(a, b, n));
 			}
 		}
 	}
