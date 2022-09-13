@@ -6,7 +6,7 @@
  * @n: integer input
  * Return: void
  */
-int calc_table(int a, int b, int n);
+void calc_table(int a, int b, int n);
 
 void print_times_table(int n)
 {
@@ -24,7 +24,7 @@ void print_times_table(int n)
 	}
 }
 
-calc_table(int a, int b, int n)
+calc_table(a, b, n)
 {
 	int c, d, e, f;
 
