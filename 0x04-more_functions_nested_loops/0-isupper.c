@@ -2,6 +2,7 @@
 
 /**
  * _isupper - checks if letter is caps or not
+ * @c: parameter holding alphabet
  * Return: 0 or 1 if letter is small or caps respectively
  */
 int _isupper(int c)
