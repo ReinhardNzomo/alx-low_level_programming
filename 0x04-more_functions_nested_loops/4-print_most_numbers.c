@@ -2,16 +2,17 @@
 
 /**
 * print_most_numbers - print numbers btwn 0 & 9 except 2 & 4
+* Return: 0
 */
 void print_most_numbers(void)
 {
-	int alx;
+	int a;
 
-	for (alx >= 0; alx < 10; alx++)
+	for (a >= 48; a < 58; a++)
 	{
-		if (alx != 2 || alx != 4)
+		if (a != 50 || a != 52)
 		{
-			_putchar(alx);
+			_putchar(a);
 		}
 	}
 	_putchar('\n');
