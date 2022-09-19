@@ -1,4 +1,4 @@
-#include "main.h"
+u#include "main.h"
 /**
 * puts_half- print half of string
 * @str: string
@@ -7,14 +7,17 @@
 
 void puts_half(char *str)
 {
-	int i, j = 0;
+	int i = 0;
+	int j;
 
 	while (str[i] != '\0')
+	{
 		i++;
+	}
 
 	if (i % 2 == 1)
 	{
-		j = i / 2;
+		j = (i - 1) / 2;
 		j += 1;
 	}
 	else
