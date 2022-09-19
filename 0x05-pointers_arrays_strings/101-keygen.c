@@ -8,7 +8,7 @@
 
 int main()
 {
-	int i, password, len;
+	int i, len;
 
 	len = 10;
 	srand((unsigned int) time(NULL));
