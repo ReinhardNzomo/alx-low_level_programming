@@ -7,27 +7,27 @@
 
 int _atoi(char *s)
 {
-	int x;
-	int trojan;
+	short boolean;
+	int result, i, neg;
 
-	x = 0;
+	i = result = boolean = 0;
+	neg = -1;
+
 	while (s[x] != '\0')
 	{
+		if (s[i] == '-')
+			neg *= -1;
+
 		if (s[x] >= '0' && s[x] <= '9')
 		{
-			if (s[x - 1] == '-')
-			{
-				_putchar('-');
-			}
-			if ((s[x + 1] > '9') || (s[x] < '0'))
-			{
-				_putchar(s[x]);
-				break;
-			}
-			trojan = s[x];
-			_putchar(trojan);
+			result *= 10;
+			result -= (s[i] - '0');
+			boolean = 1;
 		}
-		x++;
+		else if (boolean == 1)
+			break;
+		i++;
 	}
-	return (0);
+	result *= neg;
+	return (result);
 }
