@@ -25,7 +25,7 @@ int _atoi(char *s)
 				break;
 			}
 			trojan = s[x];
-			_putchar(res);
+			_putchar(trojan);
 		}
 		x++;
 	}
