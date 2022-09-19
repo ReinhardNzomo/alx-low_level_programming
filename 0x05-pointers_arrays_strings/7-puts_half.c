@@ -9,10 +9,18 @@ void puts_half(char *str)
 {
 	int i, j = 0;
 
-	while (*(str + i))
+	while (str[i] != '\0')
 		i++;
 
-	j = i / 2;
+	if (i % 2 == 1)
+	{
+		j = i / 2;
+		j += 1;
+	}
+	else
+	{
+		j = i / 2;
+	}
 
 	while (j < i)
 	{
