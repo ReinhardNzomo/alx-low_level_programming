@@ -15,11 +15,11 @@ int _atoi(char *s)
 	{
 		if (s[x] >= '0' && s[x] <= '9')
 		{
-			if (s[x] == '-')
+			if (s[x - 1] == '-')
 			{
 				_putchar('-');
 			}
-			if ((s[x] >= '0') || (s[x] <= '9'))
+			if ((s[x + 1] > '9') || (s[x] < '0'))
 			{
 				_putchar(s[x]);
 				break;
@@ -29,5 +29,5 @@ int _atoi(char *s)
 		}
 		x++;
 	}
-	return (trojan);
+	return (0);
 }
