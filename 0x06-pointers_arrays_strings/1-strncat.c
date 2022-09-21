@@ -4,6 +4,7 @@
 * *_strncat - concat two strings upto n
 * @dest: first string
 * @src: second string
+* @n: param
 * Return: dest
 */
 
