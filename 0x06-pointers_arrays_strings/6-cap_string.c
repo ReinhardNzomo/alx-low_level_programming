@@ -1,11 +1,11 @@
 #include "main.h"
 /**
 * *cap_string- capitalize words
-* @n: array
+* @s: array
 * Return: caps string of words
 */
 
-char *cap_string(char *n)
+char *cap_string(char *s)
 {
 	int a = 0, i;
 	int cspc = 13; /*count of special charcters*/
@@ -26,5 +26,5 @@ char *cap_string(char *n)
 		a++;
 	}
 
-	return (n);
+	return (s);
 }
