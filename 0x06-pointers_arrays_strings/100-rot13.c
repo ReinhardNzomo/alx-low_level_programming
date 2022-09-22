@@ -8,14 +8,14 @@
 char *rot13(char *s)
 {
 	int a, j;
-	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char x[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char n[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (a = 0; z[a] != '\0'; a++)
 	{
 		for (j = 0; j < 56; j++)
 		{
-			if (z[a] == a[j])
+			if (z[a] == x[j])
 			{
 				z[a] = n[j];
 				break;
