@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
 * *rot13- rotate string by 13 places
 * @s: string
@@ -12,13 +11,13 @@ char *rot13(char *s)
 	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char n[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; z[i] != '\0'; i++)
+	for (a = 0; z[a] != '\0'; a++)
 	{
 		for (j = 0; j < 56; j++)
 		{
-			if (z[i] == a[j])
+			if (z[a] == a[j])
 			{
-				z[i] = n[j];
+				z[a] = n[j];
 				break;
 			}
 		}
