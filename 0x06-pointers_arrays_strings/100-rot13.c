@@ -11,13 +11,13 @@ char *rot13(char *s)
 	char x[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char n[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (a = 0; z[a] != '\0'; a++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
 		for (j = 0; j < 56; j++)
 		{
-			if (z[a] == x[j])
+			if (s[a] == x[j])
 			{
-				z[a] = n[j];
+				s[a] = n[j];
 				break;
 			}
 		}
