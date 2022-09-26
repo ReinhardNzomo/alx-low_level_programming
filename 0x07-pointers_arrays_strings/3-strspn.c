@@ -6,7 +6,7 @@
 * Return: number of bytes
 */
 
-unsigned int (char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	int a = 0, b, t = 0;
 
