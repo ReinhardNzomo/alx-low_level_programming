@@ -3,7 +3,7 @@
 * _strpbrk - searches a string for any of a set of bytes.
 * @s: source string
 * accept: characters
-* Return: pointer to the byte in s that 
+* Return: pointer to the byte in s that
 *	matches one of the bytes in accept
 */
 
@@ -11,15 +11,15 @@ char *_strpbrk(char *s, char *accept)
 {
 	int a = 0, b;
 
-	while (accept[a])
+	while (s[a])
 	{
 		b = 0;
 
-		while (s[b])
+		while (accept[b])
 		{
-			if (s[b] == accept[a])
+			if (s[a] == accept[b])
 			{
-				s += b;
+				s += a;
 				return (s);
 			}
 			b++;
