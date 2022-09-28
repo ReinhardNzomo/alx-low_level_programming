@@ -10,7 +10,7 @@ int strlencheck(char *a, int l)
 {
 	if (*a == 0)
 		return (l - 1);
-	return (strlen(a + 1, l + 1));
+	return (strlecheck(a + 1, l + 1));
 }
 
 /**
@@ -26,7 +26,7 @@ int strcmpcheck(char *a, int l)
 		return (0);
 	else if (*a == 0)
 		return (1);
-	return (strcmp(a + 1, l - 2));
+	return (strcmpcheck(a + 1, l - 2));
 }
 
 /**
