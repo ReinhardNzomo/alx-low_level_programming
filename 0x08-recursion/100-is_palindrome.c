@@ -24,8 +24,8 @@ int strcmpcheck(char *a, int l)
 {
 	if (l < 1)
 		return (1);
-	if (*a == *(s + 1))
-		return (strcmpcheck (s + 1, l - 2));
+	if (*a == *(a + 1))
+		return (strcmpcheck (a + 1, l - 2));
 	return (0);
 }
 
