@@ -6,11 +6,11 @@
 * Return: l
 */
 
-int strlencheck(char *a, int l)
+int strlencheck(char *a)
 {
-	if (*a == 0)
-		return (l - 1);
-	return (strlencheck(a + 1, l + 1));
+	if (!*a)
+		return (0);
+	return (1 + strlencheck(a + 1));
 }
 
 /**
@@ -22,11 +22,11 @@ int strlencheck(char *a, int l)
 
 int strcmpcheck(char *a, int l)
 {
-	if (*a != (*a + l))
-		return (0);
-	else if (*a == 0)
+	if (l < 1)
 		return (1);
-	return (strcmpcheck(a + 1, l - 2));
+	if (*a == *(s + 1))
+		return (strcmpcheck (s + 1, l - 2));
+	return (0);
 }
 
 /**
@@ -39,6 +39,6 @@ int is_palindrome(char *s)
 {
 	int l;
 
-	l = strlencheck(s, 0);
-	return (strcmpcheck(s, l));
+	l = strlencheck(s);
+	return (strcmpcheck(s, l - 1));
 }
