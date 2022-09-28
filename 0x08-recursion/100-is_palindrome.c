@@ -1,12 +1,12 @@
 #include "main.h"
 /**
-* strlen - get length of string
+* strlencheck - get length of string
 * @a: string
 * @l: counter
 * Return: l
 */
 
-int strlen(char *a, int l)
+int strlencheck(char *a, int l)
 {
 	if (*a == 0)
 		return (l - 1);
@@ -14,13 +14,13 @@ int strlen(char *a, int l)
 }
 
 /**
-* strcmp - compares string against reverse string
+* strcmpcheck - compares string against reverse string
 * @a: string
 * @l: string length
 * Return: 0/1
 */
 
-int strcmp(char *a, int l)
+int strcmpcheck(char *a, int l)
 {
 	if (*a != (*a + l))
 		return (0);
@@ -39,6 +39,6 @@ int is_palindrome(char *s)
 {
 	int l;
 
-	l = strlen(s, 0);
-	return (strcmp(s, l));
+	l = strlencheck(s, 0);
+	return (strcmpcheck(s, l));
 }
