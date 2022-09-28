@@ -47,11 +47,11 @@ int strlencheck(char *a)
  */
 int strcmpcheck(char *a, int l, int i)
 {
-	if (s[i] == s[l / 2])
+	if (a[i] == a[l / 2])
 		return (1);
 
-	if (s[i] == s[l - i - 1])
-		return (strcmpcheck(s, l, i + 1));
+	if (a[i] == a[l - i - 1])
+		return (strcmpcheck(a, l, i + 1));
 
 	return (0);
 }
