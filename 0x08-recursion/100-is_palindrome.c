@@ -1,43 +1,57 @@
 #include "main.h"
-/**
-* strlencheck - get length of string
-* @a: string
-* Return: length
-*/
-
-int strlencheck(char *a)
-{
-	if (!*a)
-		return (0);
-	return (1 + strlencheck(a + 1));
-}
 
 /**
-* strcmpcheck - compares string against reverse string
-* @a: string
-* @l: string length
-* Return: 0/1
-*/
-
-int strcmpcheck(char *a, int l)
-{
-	if (l < 1)
-		return (1);
-	if (*a == *(a + 1))
-		return (strcmpcheck(a + 1, l - 2));
-	return (0);
-}
-
-/**
-* is_palindrome - check if string is palindrome
-* @s: string
-* Return: 1/0
+* is_palindrome - returns true if the given string is a palindrome
+*@s: string to check
+*Return: true if the given string is a palindrome
 */
 
 int is_palindrome(char *s)
 {
-	int l;
+	int index = 0;
+	int l = strlencheck(s);
 
-	l = strlencheck(s);
-	return (strcmpcheck(s, l - 1));
+	if (!(*s))
+		return (1);
+
+	return (strcmpcheck(s, l, index));
+}
+
+/**
+ * strlencheck - Returns the length of a string.
+ * @a: The string to be measured.
+ *
+ * Return: The length of the string.
+ */
+int strlencheck(char *a)
+{
+	int l = 0;
+
+	if (*(a + l))
+	{
+		l++;
+		l += strlencheck(a + l);
+	}
+
+	return (l);
+}
+
+/**
+ * strcmpcheck - Checks if a string is a palindrome.
+ * @a: The string to be checked.
+ * @l: The length of a.
+ * @i: The index of the string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
+ */
+int strcmpcheck(char *a, int l, int i)
+{
+	if (s[i] == s[l / 2])
+		return (1);
+
+	if (s[i] == s[l - i - 1])
+		return (strcmpcheck(s, l, i + 1));
+
+	return (0);
 }
