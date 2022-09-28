@@ -2,8 +2,7 @@
 /**
 * strlencheck - get length of string
 * @a: string
-* @l: counter
-* Return: l
+* Return: length
 */
 
 int strlencheck(char *a)
@@ -25,7 +24,7 @@ int strcmpcheck(char *a, int l)
 	if (l < 1)
 		return (1);
 	if (*a == *(a + 1))
-		return (strcmpcheck (a + 1, l - 2));
+		return (strcmpcheck(a + 1, l - 2));
 	return (0);
 }
 
