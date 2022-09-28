@@ -9,12 +9,6 @@
 
 int _sqrt(int x, int r);
 
-/**
-* _sqrt_recursion - return naturasqr root
-* @n: number param
-* Return: sqr root
-*/
-
 int _sqrt(int x, int r)
 {
 	if (r * r == x)
@@ -23,6 +17,12 @@ int _sqrt(int x, int r)
 		return (-1);
 	return (_sqrt(x, (r + 1)));
 }
+
+/**
+* _sqrt_recursion - return naturasqr root
+* @n: number param
+* Return: sqr root
+*/
 
 int _sqrt_recursion(int n)
 {
