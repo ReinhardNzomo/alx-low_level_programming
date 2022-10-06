@@ -41,15 +41,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (index = 0; s1[index]; index++)
 	{
-		concat_str[len++] = s1[index];
+		concat_str[l++] = s1[index];
 	}
 
 	for (index = 0; s2[index] && index < n; index++)
 	{
-		concat_str[len++] = s2[index];
+		concat_str[l++] = s2[index];
 	}
 
-	concat_str[len] = '\0';
+	concat_str[l] = '\0';
 
 	return (concat_str);
 }
