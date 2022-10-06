@@ -1,9 +1,10 @@
 #include "main.h"
 /**
 * _realloc- reallocate memomory in block
+* @ptr: pointer to address
 * @old_size: original memory
 * @new_size: new memory
-* Retun: pointer to new mem
+* Return: pointer to new mem
 */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -33,9 +34,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			for (i = 0; i < min(old_size, new_size); i++)
 			{
 				*((char *)temp + i) = *((char *)ptr + i);
-				free(ptr);
-				return (temp);
 			}
+			free(ptr);
+			return (temp);
 		}
 		else
 		{
