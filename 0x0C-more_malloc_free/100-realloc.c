@@ -31,7 +31,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		temp = malloc(new_size);
 		if (temp != NULL)
 		{
-			for (i = 0; (new_size > old_size ? old_size : new_size); i++)
+			for (i = 0; i < min(new_size, old_size); i++)
 			{
 				*((char *)temp + i) = *((char *)ptr + i);
 			}
