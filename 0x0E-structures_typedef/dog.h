@@ -5,11 +5,11 @@
 #include <stdlib.h>
 
 /**
-* struct dog - a new type of data
+*struct dog - a new type of data
 * representing a dog
-* @name: dog name
-* @age: dog age
-* @owner: dog owner
+*@name: dog name
+*@age: dog age
+*@owner: dog owner
 */
 
 struct dog{
