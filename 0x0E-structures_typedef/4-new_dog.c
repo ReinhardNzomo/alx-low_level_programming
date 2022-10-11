@@ -17,8 +17,20 @@
 	x = malloc(sizeof(dog_t));
 
 	if (x == NULL)
-	return (NULL);
+		return (NULL);
 
+	if (name == NULL)
+	{
+		free(x);
+		free(owner);
+		return (NULL);
+	}
+	if (owner == NULL)			
+	{
+		free(x);
+		free(name);
+		return (NULL);
+	}
 	x->name = strcpy(x->name, name);
 	x->age = age;
 	x->owner = strcpy(x->owner, owner);
