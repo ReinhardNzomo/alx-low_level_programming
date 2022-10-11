@@ -6,16 +6,16 @@
 
 /**
 *struct dog - a new type of data
-* representing a dog
+*representing a dog
 *@name: dog name
 *@age: dog age
 *@owner: dog owner
 */
 
 struct dog{
-char *name;
-float age;
-char *owner;
+	char *name;
+	float age;
+	char *owner;
 };
 
 struct dog *dog(char *name, float age, char *owner);
