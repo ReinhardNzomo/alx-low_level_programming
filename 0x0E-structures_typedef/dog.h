@@ -18,4 +18,6 @@ float age;
 char *owner;
 };
 
+struct dog *dog(char *name, float age, char *owner);
+
 #endif
