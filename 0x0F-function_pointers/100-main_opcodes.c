@@ -1,10 +1,10 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <stdlib.h>
 
 /**
 *main - print the opcodes of its own main function
 *@argc: number of arguments
-@argv: array of arguments
+*@argv: array of arguments
 *Return: 1/2
 */
 
@@ -30,14 +30,14 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < bytes; i++)
 	{
-		opcodes= *(unsigned char *)address;
+		opcodes = *(unsigned char *)address;
 		printf("%.2x", opcodes);
 
 		if (i == bytes - 1)
 		continue;
 
 		printf(" ");
-		address++:
+		address++;
 	}
 
 	printf("\n");
