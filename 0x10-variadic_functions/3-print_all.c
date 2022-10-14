@@ -29,7 +29,7 @@ void print_i(va_list arg)
 
 
 /**
-* print_c - prints a float character
+* print_f - prints a float character
 * @arg: list of arguments
 * Return: 0
 */
