@@ -2,7 +2,7 @@
 
 /**
 *print_numbers - print number in a parameter
-*@seperator: string
+*@separator: string
 *@n: number of inputs
 *Return: 0
 */
