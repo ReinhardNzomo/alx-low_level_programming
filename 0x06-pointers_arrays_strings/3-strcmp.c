@@ -9,8 +9,14 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int res;
-
-	res = strcmp(s1, s2);
-	return (res);
+	while (*s1 != '\0' && *s2 != '\0')
+	{
+		if (*s1 != *s2)
+		{
+			return (*s1 - *s2);
+		}
+		s1 = s1 + 1;
+		s2 = s2 + 1;
+	}
+	return (0);
 }
