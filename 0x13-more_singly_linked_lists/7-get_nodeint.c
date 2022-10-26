@@ -9,8 +9,8 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	int counter;
-	listint_t temp_node;
+	unsigned int counter;
+	listint_t *temp_node;
 
 	counter = 0;
 
