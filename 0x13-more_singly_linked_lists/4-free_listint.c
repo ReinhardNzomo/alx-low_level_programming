@@ -1,3 +1,5 @@
+#include "lists.h"
+
 /**
 * free_listint - free linked list
 * @head: pointer to head of the list
