@@ -3,6 +3,7 @@
 /**
 * clear_bit - sets a bit at a position to 0
 * @b: binary
+* @index: index
 * Return: number
 */
 
