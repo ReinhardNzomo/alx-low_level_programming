@@ -10,17 +10,17 @@
 unsigned int binary_to_unit(const char *b)
 {
 	unsigned int decimal = 0;
-	int strlen = str_len(b);
+	int slen = strlen(b);
 	int base = 1;
 
 	if (!check_valid_string(b))
 		return (0);
 
-	while (str_len)
+	while (slen)
 	{
-		decimal += ((b[strlen - 1] - '0') * base);
+		decimal += ((b[slen - 1] - '0') * base);
 		base *= 2;
-		strlen--;
+		slen--;
 	}
 	return (decimal);
 }
