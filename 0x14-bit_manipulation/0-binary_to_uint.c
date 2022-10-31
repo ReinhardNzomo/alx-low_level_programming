@@ -1,25 +1,46 @@
 #include "main.h"
 #include <string.h>
+
 /**
-* binary_to_uint - binary to int converter
+* binary_to_unit - binary to int converter
 * @b: binary
 * Return: number
 */
 
-unsigned int binary_to_uint(const char *b)
+unsigned int binary_to_unit(const char *b)
 {
-	int str_len = strlen(b);
-	int total = 0;
-	int decimal_value = 1;
-	int i;
+	unsigned int decimal = 0;
+	int strlen = str_len(b);
+	int base = 1;
 
-	for (i = (str_len - 1); i >= 0; i--)
+	if (!check_valid_string(b))
+		return (0);
+
+	while (str_len)
 	{
-		if (b[i] == 1)
-		{
-			total += decimal_value;
-		}
-		decimal_value *= 2;
+		decimal += ((b[strlen - 1] - '0') * base);
+		base *= 2;
+		strlen--;
 	}
-	return (total);
+	return (decimal);
+}
+
+/**
+ * check_valid_string - checks if a string has only 0's and 1's
+ * @b: string to be checked
+ *
+ * Return: 1 if string is valid, 0 otherwise
+ */
+int check_valid_string(const char *b)
+{
+	if (b == NULL)
+		return (0);
+
+	while (*b)
+	{
+		if (*b != '1' && *b != '0')
+			return (0);
+		b++;
+	}
+	return (1);
 }
