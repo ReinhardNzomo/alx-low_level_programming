@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
-* binary_to_unit - binary to int converter
-* @b: binary
-* Return: number
+* print_binary - integer to binary
+* @n: number
+* Return: binary
 */
 
-unsigned int binary_to_unit(const char *b)
-{
-	unsigned int bit = 0;
 
-	while (b && *b)
+void print_binary(unsigned long int n)
+{
+	if (n > 1)
 	{
-		if (*b != '0' && *b != '1')
-		{
-			return (0);
-		}
-		bit = bit << 1;
-		bit = bit | (*b - '0');
-		b++;
+		print_binary(n >> 1);
 	}
-	return (bit);
+	if (n & 1)
+	{
+		_putchar('1');
+	}
+	else
+	{
+		_putchar('0');
+	}
 }
