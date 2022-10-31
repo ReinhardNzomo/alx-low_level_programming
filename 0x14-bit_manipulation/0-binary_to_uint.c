@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
 * binary_to_uint - binary to int converter
 * @b: binary
@@ -8,17 +8,18 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int bit = 0;
+	int str_len = strlen(b);
+	int total = 0;
+	int decimal_value = 1;
+	int i;
 
-	while (b && *b)
+	for (i = (str_len - 1); i >= 0; i--)
 	{
-		if (*b != '0' && *b != '1')
+		if (b[i] == 1)
 		{
-			return (0);
+			total += decimal_value;
 		}
-		bit = bit << 1;
-		bit = bit | (*b - '0');
-		b++;
+		decimal_value *= 2;
 	}
-	return (bit);
+	return (total);
 }
