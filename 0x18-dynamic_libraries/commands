@@ -1,0 +1,5 @@
+Create object files
+gcc -fPIC -c *.c
+
+Create libdynamic.so file
+gcc -shared -o libdynamic.so *.o
